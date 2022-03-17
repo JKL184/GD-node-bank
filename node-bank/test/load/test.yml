@@ -13,3 +13,16 @@ scenarios:
           json:
               email: "you@example.com"
               password: "Password"
+  - flow:
+      - post: 
+          url: "/member"
+          capture:
+            selector: "/member/deposit"
+            attr: "href"
+
+
+  - flow:
+      - post: 
+          url: "/member/deposit"
+          json:
+              amount: 3000

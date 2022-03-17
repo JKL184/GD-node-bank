@@ -22,10 +22,7 @@ describe('isWithdrawValid', function() {
       var result = isWithdrawValid('20000','10000');
       expect(result.isValid).toBe(false);
     });
-    it('should return false when the withdraw amount has more than 2 decimal places', function() {
-      var result = isWithdrawValid('9.333','10000');
-      expect(result.isValid).toBe(false);
-    });
+    
   
     it('should return true for 9252.25', function() {
       var result =isWithdrawValid('9252.25','10000');

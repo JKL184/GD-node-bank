@@ -1,8 +1,8 @@
 'use strict';
-
+const RegisterFunctionSet = {
 
 // Verfication of Card Function: This function checks to ensure that the card number entered is valid i.e not empty and is 16 digits long
-var verifyCard = function(cardnum) {
+	verifyCard(cardnum){
 	var response = {
 		isValid : false,
 		message : ""
@@ -23,8 +23,7 @@ var verifyCard = function(cardnum) {
 		response.message = "Card number entered is invalid"; 
 	}
     return response;
-};
-var verifyName = function(name){
+}, verifyName(name){
 	var response = {
 	isValid : true,
 	message : "N"
@@ -35,8 +34,8 @@ var verifyName = function(name){
 	}
 	
 	return response;
-};
-var isEmailValid = function(emailAddr) {
+}, 
+isEmailValid(emailAddr) {
 	var response = {
 		isValid : true,
 		message : ""
@@ -50,8 +49,7 @@ var isEmailValid = function(emailAddr) {
 		response.message = "email is not valid";
 	}
 	return response;	
-};
-var verifyPassword = function(pw) {
+}, verifyPassword(pw) {
 	var response = {
 		isValid : true,
 		message : ""
@@ -75,4 +73,8 @@ var verifyPassword = function(pw) {
 		}
 	}
 	return response;
+},
 };
+
+module.exports = RegisterFunctionSet;
+//needs to be fixed because 16 digit exception isn't working anymore

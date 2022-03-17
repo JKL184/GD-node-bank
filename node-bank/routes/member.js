@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
 var mongoose = require('mongoose');
-const TransactionFunctionSet = require('../src/transact');
+const TransactionFunctionSet = require('../exports/transact');
 var userdata;
 
 /* Get member page. */

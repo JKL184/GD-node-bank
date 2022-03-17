@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
 var mongoose = require('mongoose');
-const RegisterFunctionSet = require('../src/register');
+const RegisterFunctionSet = require('../exports/register');
 var session;
 
 

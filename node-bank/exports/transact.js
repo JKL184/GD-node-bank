@@ -1,4 +1,5 @@
-var isWithdrawValid = function(withdraw, AvBal) {
+const TransactionFunctionSet = {
+	isWithdrawValid(withdraw, AvBal){
 		var response = {
 			isValid: true,
 			message: "",
@@ -37,9 +38,8 @@ var isWithdrawValid = function(withdraw, AvBal) {
 			}
 		}
 		return response;
-	};
-	var checkDeposit = function(deposit) {
-
+	},
+	checkDeposit(deposit){
 		var response = {
 			isValid: true,
 			message: "",
@@ -71,7 +71,7 @@ var isWithdrawValid = function(withdraw, AvBal) {
 			response.message = "Deposit Amount value must not be below 0";
 		}
 		return response;
-	};
+	},
+};
 
-
-
+module.exports = TransactionFunctionSet;
